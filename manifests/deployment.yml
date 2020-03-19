@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: jkarkoszkapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jkarkoszkapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: jkarkoszkapipelinesjavascriptdocker 
+          image: emmacontainerregistry.azurecr.io/jkarkoszkapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
